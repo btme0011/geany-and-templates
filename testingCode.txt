@@ -1,0 +1,126 @@
+#include <sstream>
+#include <fstream>
+#include <deque>
+#include <queue>
+#include <stack>
+#include <set>
+#include <list>
+#include <map>
+#include <unordered_map>
+#include <functional>
+#include <utility>
+#include <bitset>
+#include <cstdlib>
+#include <ctime>
+#include <cstdio>
+
+
+#include <stdlib.h>
+#include <iostream>
+#include <chrono> //clock
+#include <vector>
+#include <string>
+#include <iomanip>  //setprecision function
+#include <cmath>	//math
+#include <cstdio>
+#include <vector>	//vector array
+#include <algorithm>	//STL algorithm
+#include <set> //STL library set
+#include <sstream> // for stringstream
+
+
+using namespace std;
+using namespace std::chrono; 
+
+
+
+//c++ templte for help...........................................................
+
+#define deb(x) cout<<#x<<" "<<x<<endl;/* for debuging  printing variable with name*/
+#define debb(x,y) cout<<#x<<" "<<x<<endl<<#y<<" "<<y<<endl;										
+#define debbb(x,y,z) cout<<#x<<" "<<x<<endl<<#y<<" "<<y<<endl<<#z<<" "<<z<<endl;			
+
+typedef long long ll;
+
+	
+//for taking multiple input
+template<typename... T>
+void input(T&... t){
+	((cin>>t),...);
+	}
+	
+//for loop
+#define fo(i,n) for(int i=0;i<n;i++)
+#define Fo(i,k,n) for(int i=k;i<n;i++)
+
+
+//to print vector element 
+template<typename T>
+void printV(T vec){
+	fo(i,vec.size()) cout<<vec[i]<<" "<<flush;
+	}
+	
+
+
+
+
+
+
+
+//c++ template for help........................................................
+
+
+
+int main() {
+	ll tt;
+	input(tt);
+	fo(j,tt){
+		
+		
+	
+	ll N,P;
+	input(N,P);
+	vector<ll> den;
+	fo(i,N){
+		ll a;
+		input(a);
+		den.push_back(a);
+	}
+	
+	ll q=-1;
+	fo(i,N){
+		if(P%den[i]!=0) {q=den[i]; break;}
+	}
+
+	ll sum=0;
+	if(q==-1){
+		cout<<"NO"<<endl;
+	}else {
+		cout<<"YES"<<" ";
+		ll mult=q;
+		ll i=1;
+		while(sum<P){
+			sum=mult*i;
+			i++;
+		}
+	}
+	
+	fo(i,N){
+		if(den[i]==q)
+			den[i]=(sum/den[i]);
+		else den[i]=(0);
+	}
+	
+	printV(den);
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
