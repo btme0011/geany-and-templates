@@ -11,24 +11,24 @@ typedef long long ll;
 
 template<typename... T>
 void print1(T... t){
-	((cout<<t<<" "),...);
+	((cerr<<t<<" "),...);
 }
 
 template<typename... T>
 void print2(T... t){
 		vector<vector<ll>> ans={t...};
 		for(ll i=0;i<(ll)ans.size();i++){
-			if(i!=0) cout<<"\t\t";
-			else cout<<"\t";
+			if(i!=0) cerr<<"\t\t";
+			else cerr<<"\t";
 			for(ll j=0;j<(ll)ans[i].size();j++){
-				cout<<ans[i][j]<<" ";
+				cerr<<ans[i][j]<<" ";
 			}
 			if(i!=(ll)ans.size()-1)
-			cout<<endl;
+			cerr<<endl;
 		}
 }	
-#define deb(...) {cout<<" [ "#__VA_ARGS__<<" : "; print1(__VA_ARGS__); cout<<"]"<<endl; }
-#define vdeb(...) {cout<<" [ "#__VA_ARGS__<<" : "; print2(__VA_ARGS__); cout<<"]"<<endl;}
+#define deb(...) {cerr<<" [ "#__VA_ARGS__<<" : "; print1(__VA_ARGS__); cerr<<"]"<<endl; }
+#define vdeb(...) {cerr<<" [ "#__VA_ARGS__<<" : "; print2(__VA_ARGS__); cerr<<"]"<<endl;}
 
 // to return everything in string
 #define ret(...) {stringstream returnn;returnn<<__VA_ARGS__;return returnn.str();}
@@ -78,16 +78,8 @@ void itR(T map){
 
 //c++ template for help.....................................................................................................................................................
 
+
 string solve(){
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -111,12 +103,12 @@ int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
-	ll testCase;
-	cin>>testCase;
-	for(ll tt=0;tt<testCase;tt++){
+	//ll testCase;
+	//cin>>testCase;
+	//for(ll tt=0;tt<testCase;tt++){
 		string ans1=solve();
 		if(ans1!="")
 			cout<<ans1<<endl;
-	}
+	//}
 	return 0;
 }
