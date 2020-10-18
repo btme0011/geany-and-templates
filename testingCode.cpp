@@ -85,21 +85,8 @@ pods;
 
 //c++ template for help.....................................................................................................................................................
 
-// CALM DOWN : - )  
-
 string solve(){
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	// CALM DOWN : - ) 
 	
 	
 	
@@ -122,12 +109,28 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    ll testCase;
-    cin>>testCase;
-    for(ll tt=0;tt<testCase;tt++){
+    //ll testCase;
+    //cin>>testCase;
+    //for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    }
+    //}
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
