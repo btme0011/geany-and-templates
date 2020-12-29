@@ -9,7 +9,7 @@ typedef long long ll;
 
 template<typename... T>
 void print1(T... t){
-    ((cout<<t<<" "),...);
+    ((cerr<<t<<" "),...);
 }
 
 template<typename... T>
@@ -86,7 +86,11 @@ pods;
 //c++ template for help.....................................................................................................................................................
 
 string solve(){
-	// CALM DOWN : - ) 
+	// TAKE TIME TO THINK		:		|
+	// TAKE TIME TO THINK		:			|	
+	// TAKE TIME TO THINK			---			|		// TAKE TIME TO THINK
+	// TAKE TIME TO THINK		:			|
+	// TAKE TIME TO THINK		:		|
 	
 	
 	
@@ -97,15 +101,19 @@ string solve(){
 	
 	
 	
-
-
-
-
-ret("");
+	
+	
+	
+	
+	
+	
+	
+	
+ret("");	
 }
 
 int main() {
-    cout<<setprecision(10);
+    cout<<setprecision(15);
     ios::sync_with_stdio(0);
     cin.tie(0);
     
@@ -118,9 +126,6 @@ int main() {
     //}
     return 0;
 }
-
-
-
 
 
 
