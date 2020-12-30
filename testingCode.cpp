@@ -86,28 +86,11 @@ pods;
 //c++ template for help.....................................................................................................................................................
 
 string solve(){
-	// TAKE TIME TO THINK		:		|
-	// TAKE TIME TO THINK		:			|	
+	// TAKE TIME TO THINK		:		|				// THINK BRUTE FORCE AND OPTIMIZE
+	// TAKE TIME TO THINK		:			|			// LEAVE
 	// TAKE TIME TO THINK			---			|		// TAKE TIME TO THINK
-	// TAKE TIME TO THINK		:			|
-	// TAKE TIME TO THINK		:		|
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	// TAKE TIME TO THINK		:			|			// HELP FORM EXAMPLE
+	// TAKE TIME TO THINK		:		|				// READ QUESTION CAREFULLY
 	
 ret("");	
 }
@@ -117,21 +100,15 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    //ll testCase;
-    //cin>>testCase;
-    //for(ll tt=0;tt<testCase;tt++){
+    ll testCase;
+    cin>>testCase;
+    for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    //}
+    }
     return 0;
 }
-
-
-
-
-
-
 
 
 
