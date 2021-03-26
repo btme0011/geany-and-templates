@@ -86,11 +86,14 @@ pods;
 //c++ template for help.....................................................................................................................................................
 
 string solve(){
-	// TAKE TIME TO THINK		:		|				// THINK BRUTE FORCE AND OPTIMIZE
-	// TAKE TIME TO THINK		:			|			// LEAVE
-	// TAKE TIME TO THINK			---			|		// TAKE TIME TO THINK
-	// TAKE TIME TO THINK		:			|			// HELP FORM EXAMPLE
-	// TAKE TIME TO THINK		:		|				// READ QUESTION CAREFULLY
+	// TAKE TIME TO THINK		:		|				// 	THINK BRUTE FORCE AND OPTIMIZE
+	// TAKE TIME TO THINK		:			|			// 	LEAVE
+	// TAKE TIME TO THINK			---			|		// 	TAKE TIME TO THINK
+	// TAKE TIME TO THINK		:			|			// 	HELP FROM EXAMPLE
+	// TAKE TIME TO THINK		:		|				// **********KEEP QUESTION CLEAR IN MIND*********
+														// 	OVERFLOW
+														//	CODE WITH EDGE CASE
+														//	JUMP
 	
 ret("");	
 }
