@@ -77,13 +77,16 @@ void itR(T map){
 typedef tree<
 ll,
 null_type,
-greater<int>,
+greater_equal<ll>,	// less for set and  less_equal for  multiset
+					// greater to find no of element striclty greater and less to find no of element strictly less
 rb_tree_tag,
 tree_order_statistics_node_update>
 pods;
  
 
 //c++ template for help.....................................................................................................................................................
+
+
 
 string solve(){
 	// TAKE TIME TO THINK		:		|				// 	THINK BRUTE FORCE AND OPTIMIZE
@@ -95,6 +98,34 @@ string solve(){
 														//	CODE WITH EDGE CASE
 														//	JUMP
 	
+	ll n,m;
+	cin>>n>>m;
+	
+	vector<ll> vec(n);
+	for(auto &x:vec) cin>>x;
+	
+	vector<ll> pref={0};
+	for(auto x:vec) pref.push_back(pref.back()+x);
+	
+	pods ms;
+	ms.insert(0);
+	ll ans=0;
+	ll time=0;
+	//vdeb(pref);
+	for(int i=1;i<(ll)pref.size();i++){
+		ll t=pref[i]-m;
+		ll x=ms.order_of_key(t);
+		//deb(t,x);
+		ans+=x;
+		time++;
+		ms.insert(pref[i]);
+		//deb(ans);
+	}
+	
+	ret(ans);
+	
+	
+	
 ret("");	
 }
 
@@ -103,19 +134,12 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    ll testCase;
-    cin>>testCase;
-    for(ll tt=0;tt<testCase;tt++){
+    //ll testCase;
+    //cin>>testCase;
+    //for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    }
+    //}
     return 0;
 }
-
-
-
-
-
-
-
