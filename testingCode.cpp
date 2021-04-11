@@ -62,8 +62,8 @@ void printV(T vec){
     }
     
  
-#define M ll(998244353)
-const ll INF=ll(1e9+5);
+#define M ll(1e9+7)
+const ll INF=ll(1e17+5);
  
 //iterate map
 template<typename T>
@@ -82,9 +82,16 @@ greater_equal<ll>,	// less for set and  less_equal for  multiset
 rb_tree_tag,
 tree_order_statistics_node_update>
 pods;
+
+ 
  
 
+
+
+
+
 //c++ template for help.....................................................................................................................................................
+
 
 
 
@@ -93,39 +100,16 @@ string solve(){
 	// TAKE TIME TO THINK		:			|			// 	LEAVE
 	// TAKE TIME TO THINK			---			|		// 	TAKE TIME TO THINK
 	// TAKE TIME TO THINK		:			|			// 	HELP FROM EXAMPLE
-	// TAKE TIME TO THINK		:		|				// **********KEEP QUESTION CLEAR IN MIND*********
+	// TAKE TIME TO THINK		:		|				// 	**********KEEP QUESTION CLEAR IN MIND*********
 														// 	OVERFLOW
 														//	CODE WITH EDGE CASE
-														//	JUMP
-	
-	ll n,m;
-	cin>>n>>m;
-	
-	vector<ll> vec(n);
-	for(auto &x:vec) cin>>x;
-	
-	vector<ll> pref={0};
-	for(auto x:vec) pref.push_back(pref.back()+x);
-	
-	pods ms;
-	ms.insert(0);
-	ll ans=0;
-	ll time=0;
-	//vdeb(pref);
-	for(int i=1;i<(ll)pref.size();i++){
-		ll t=pref[i]-m;
-		ll x=ms.order_of_key(t);
-		//deb(t,x);
-		ans+=x;
-		time++;
-		ms.insert(pref[i]);
-		//deb(ans);
-	}
-	
-	ret(ans);
+														//	JUMP(USE PAPER OR WALK OR TAKE REST)
+														// CONSIDER THE BLACK AREA
 	
 	
+
 	
+		
 ret("");	
 }
 
