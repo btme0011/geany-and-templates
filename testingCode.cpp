@@ -94,7 +94,6 @@ pods;
 
 
 
-
 string solve(){
 	// TAKE TIME TO THINK		:		|				// 	THINK BRUTE FORCE AND OPTIMIZE
 	// TAKE TIME TO THINK		:			|			// 	LEAVE
@@ -103,12 +102,20 @@ string solve(){
 	// TAKE TIME TO THINK		:		|				// 	**********KEEP QUESTION CLEAR IN MIND*********
 														// 	OVERFLOW
 														//	CODE WITH EDGE CASE
-														//	JUMP(USE PAPER OR WALK OR TAKE REST)
+														//	JUMP(USE PAPER OR WALK OR TAKE REST OR SEE OTHER QUESTION)
 														// CONSIDER THE BLACK AREA
 	
 	
-
 	
+	
+	
+	
+	
+	
+	
+	
+	
+
 		
 ret("");	
 }
@@ -118,12 +125,12 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    //ll testCase;
-    //cin>>testCase;
-    //for(ll tt=0;tt<testCase;tt++){
+    ll testCase;
+    cin>>testCase;
+    for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    //}
+    }
     return 0;
 }
