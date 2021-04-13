@@ -94,8 +94,7 @@ ll mod_Mul(T... t){
 //c++ template for help.....................................................................................................................................................
 
 
-
-string solve(){
+string solve(ll tt){
 	// TAKE TIME TO THINK		:		|				// 	THINK BRUTE FORCE AND OPTIMIZE
 	// TAKE TIME TO THINK		:			|			// 	LEAVE
 	// TAKE TIME TO THINK			---			|		// 	TAKE TIME TO THINK
@@ -107,7 +106,8 @@ string solve(){
 														// 	CONSIDER THE BLACK AREA
 														/* 	1) MAKE SURE THE ALGO WILL WORK
 														 * 	2) THINK THE PROCESS OF CODING  
-														 * 	3) CODE PERFECTLY (USE FUNCTION AND DESCRIBING VARIABLE NAMES)  
+														 * 	3) CODE PERFECTLY AND BE CLEAR ABOUT EVERY THING YOU CODE 
+																	(USE FUNCTION AND DESCRIBING VARIABLE NAMES)  
 														 * 	4) IF WRONG ANS CHECK CODE FIRST THEN ALGO*/
 	
 
@@ -122,12 +122,12 @@ int main() {
     
 
     
-    //ll testCase;
-    //cin>>testCase;
-    //for(ll tt=0;tt<testCase;tt++){
-        string ans1=solve();
+    ll testCase;
+    cin>>testCase;
+    for(ll tt=0;tt<testCase;tt++){
+        string ans1=solve(tt);
         if(ans1!="")
             cout<<ans1<<endl;
-    //}
+    }
     return 0;
 }
