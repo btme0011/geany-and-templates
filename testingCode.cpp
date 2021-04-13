@@ -4,8 +4,11 @@ using namespace std;
 using namespace __gnu_pbds; 
 
 //c++ templte for help.......................................................................................................................................................
-
 typedef long long ll;
+#define M ll(998244353)
+const ll INF=ll(1e17+5);
+
+
 
 template<typename... T>
 void print1(T... t){
@@ -31,23 +34,6 @@ void print2(T... t){
 // to return everything in string
 #define ret(...) {stringstream returnn;returnn<<__VA_ARGS__;return returnn.str();}
 
-stringstream retvec;
-template<typename... T>
-void returnvector(T... t){
-        vector<vector<ll>> ans={t...};
-        for(ll i=0;i<(ll)ans.size();i++){
-            for(ll j=0;j<(ll)ans[i].size();j++){
-                retvec<<ans[i][j];
-                if(j!=(ll)ans[i].size()-1)
-                    retvec<<" ";
-            }
-            if(i!=(ll)ans.size()-1)
-                retvec<<endl;
-        }
-}
-#define vret(...) {retvec.clear();returnvector(__VA_ARGS__);return retvec.str();}
-    
-
 
 //for loop
 #define fo(i,n) for(int i=0;i<(ll)n;i++)
@@ -61,10 +47,7 @@ void printV(T vec){
     cout<<endl;
     }
     
- 
-#define M ll(1e9+7)
-const ll INF=ll(1e17+5);
- 
+
 //iterate map
 template<typename T>
 void itR(T map){
@@ -84,8 +67,26 @@ tree_order_statistics_node_update>
 pods;
 
  
- 
+//mod
+template<typename... T>
+ll mod_Add(T... t){
+	ll ans=0;
+    ((ans=(((ans%M)+(t%M))%M)),...);
+    return ans%M;
+}
+#define mod_add(...) mod_Add(__VA_ARGS__)
 
+ll mod_sub(ll a,ll b){
+	return (a%M-b%M+M)%M;
+}
+
+template<typename... T>
+ll mod_Mul(T... t){
+	ll ans=1;
+    ((ans=(((ans%M)*(t%M))%M)),...);
+    return ans%M;
+}
+#define mod_mul(...) mod_Mul(__VA_ARGS__)
 
 
 
@@ -99,21 +100,13 @@ string solve(){
 	// TAKE TIME TO THINK		:			|			// 	LEAVE
 	// TAKE TIME TO THINK			---			|		// 	TAKE TIME TO THINK
 	// TAKE TIME TO THINK		:			|			// 	HELP FROM EXAMPLE
-	// TAKE TIME TO THINK		:		|				// 	**********KEEP QUESTION CLEAR IN MIND*********
+	// TAKE TIME TO THINK		:		|				// 	KEEP QUESTION CLEAR IN MIND
 														// 	OVERFLOW
 														//	CODE WITH EDGE CASE
 														//	JUMP(USE PAPER OR WALK OR TAKE REST OR SEE OTHER QUESTION)
-														// CONSIDER THE BLACK AREA
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+														// 	CONSIDER THE BLACK AREA
+														/* 	MAKE SURE OF THE ALGO FIRST THEN CODE PERFECTLY USING FUNCTION, 
+																	IF WRONG CHECK CODE FIRST THEN ALGO*/
 	
 
 		
@@ -125,12 +118,14 @@ int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    ll testCase;
-    cin>>testCase;
-    for(ll tt=0;tt<testCase;tt++){
+
+    
+    //ll testCase;
+    //cin>>testCase;
+    //for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    }
+    //}
     return 0;
 }
