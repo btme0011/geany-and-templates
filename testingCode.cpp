@@ -94,7 +94,7 @@ ll mod_Mul(T... t){
 //c++ template for help.....................................................................................................................................................
 
 
-string solve(ll tt){
+string solve(){
 	// TAKE TIME TO THINK		:		|				// 	THINK BRUTE FORCE AND OPTIMIZE
 	// TAKE TIME TO THINK		:			|			// 	LEAVE
 	// TAKE TIME TO THINK			---			|		// 	TAKE TIME TO THINK
@@ -111,6 +111,7 @@ string solve(ll tt){
 														 * 	4) IF WRONG ANS CHECK CODE FIRST THEN ALGO*/
 	
 
+	
 		
 ret("");	
 }
@@ -125,7 +126,7 @@ int main() {
     ll testCase;
     cin>>testCase;
     for(ll tt=0;tt<testCase;tt++){
-        string ans1=solve(tt);
+        string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
     }
