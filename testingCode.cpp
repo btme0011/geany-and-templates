@@ -88,7 +88,8 @@ ll mod_Mul(T... t){
 }
 #define mod_mul(...) mod_Mul(__VA_ARGS__)
 
-
+//take n and array
+#define s_tart int n;cin>>n;vector<ll> vec(n);for(auto &x:vec) cin>>x;
 
 
 //c++ template for help.....................................................................................................................................................
@@ -106,11 +107,13 @@ string solve(){
 														/* 	1) MAKE SURE THE ALGO WILL WORK 
 																	(IF NOT GETTING IDEA USE PAPER OR WALK OR TAKE REST OR SEE OTHER QUESTION)
 														 * 	2) THINK THE PROCESS OF CODING  
-														 * 	3) CODE PERFECTLY AND BE CRYSTAL CLEAR ABOUT EVERY THING YOU CODE 
+														 * 	3) CODE PERFECTLY AND BE CRYSTAL CLEAR ABOUT EVERY THING YOU CODE AND CODE WITH PRESENCE OF MIND
 																	(USE FUNCTION AND DESCRIBING VARIABLE NAMES)  
-														 * 	4) IF WRONG ANS CHECK CODE FIRST THEN ALGO*/
+														 * 	4) IF WRONG ANS CHECK CODE FIRST THEN ALGO
+														 * 	5) DIFFERENT INPUT
+														 *  6) CODE AGAIN*/
 	
-
+	
 	
 		
 ret("");	
@@ -123,12 +126,12 @@ int main() {
     
 
     
-    ll testCase;
-    cin>>testCase;
-    for(ll tt=0;tt<testCase;tt++){
+    //ll testCase;
+    //cin>>testCase;
+    //for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    }
+    //}
     return 0;
 }
