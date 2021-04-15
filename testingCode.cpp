@@ -93,33 +93,35 @@ ll mod_Mul(T... t){
 
 
 //c++ template for help.....................................................................................................................................................
-
+vector<ll> org;
+set<ll> vis;
+void dfs(ll start,vector<vector<ll>> &edge){
+	org.push_back(start);
+	vis.insert(start);
+	for(auto x:edge[start]){
+		if(vis.count(x)==0) dfs(x,edge);
+	}
+}
 
 string solve(){
 /*	TAKE TIME TO THINK		:		|					1) MAKE SURE THE ALGO WILL WORK
 	TAKE TIME TO THINK		:			|			 			*KEEP QUESTION CLEAR IN MIND
 	TAKE TIME TO THINK			---			|		 			*IF NOT GETTING IDEA USE PAPER OR WALK OR TAKE REST OR SEE OTHER QUESTION
 	TAKE TIME TO THINK		:			|			 			*THINK BRUTE FORCE AND OPTIMIZE
-	TAKE TIME TO THINK		:		|				 			*HELP FROM EXAMPLE
+	TAKE TIME TO THINK		:		|							*SOLVE SIMPLER VERSION OF THE PROBLEM
+																*HELP FROM EXAMPLE
 																* LEAVE
 		DEBUG											2) THINK THE PROCESS OF CODING
 1) 	CODE(CONSIDER THE BLACK AREA)								*KEEP THINGKING OF EDGE CASE ALSO				 	
 2) 	ALGO												3) CODE PERFECTLY AND FAST BE CRYSTAL CLEAR ABOUT EVERY THING YOU CODE , CODE WITH PRESENCE OF MIND
 3) 	OVERFLOW 													*USE FUNCTION AND DESCRIBING VARIABLE NAMES	
 4)	DIFFERENT INPUT 											
-5) 	CODE AGAIN			*/										
+5) 	CODE AGAIN	
+6) 	MAP KA DIKKAT TO SAME KEY KA LIA DIFFERENT VALUE A->B AND A->C 		*/										
 																
-
-
-	ll n;
-	cin>>n;
 	
-	vector<vector<
 
-
-
-
-
+	
 		
 ret("");	
 }
