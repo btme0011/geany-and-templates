@@ -69,12 +69,12 @@ pods;
  
 //mod
 template<typename... T>
-ll mod_Add(T... t){
+ll mod_Sum(T... t){
 	ll ans=0;
     ((ans=(((ans%M)+(t%M))%M)),...);
     return ans%M;
 }
-#define mod_add(...) mod_Add(__VA_ARGS__)
+#define mod_sum(...) mod_Sum(__VA_ARGS__)
 
 ll mod_sub(ll a,ll b){
 	return (a%M-b%M+M)%M;
@@ -89,12 +89,22 @@ ll mod_Mul(T... t){
 #define mod_mul(...) mod_Mul(__VA_ARGS__)
 
 //take n and array
-#define s_tart int n;cin>>n;vector<ll> vec(n);for(auto &x:vec) cin>>x;
 
 
 //c++ template for help.....................................................................................................................................................
 
 
+bool check(string &s){
+	ll t=0;
+	ll m=0;
+	for(auto x:s){
+		if(x=='T') t++;
+		else m++;
+		if(m>t) return 0;
+	}
+	return 1;
+	
+}
 
 string solve(){
 /*	TAKE TIME TO THINK		:		|					1) MAKE SURE THE ALGO WILL WORK
@@ -112,60 +122,11 @@ string solve(){
 4)	DIFFERENT INPUT 											
 5) 	CODE AGAIN	
 6) 	MAP KA DIKKAT TO SAME KEY KA LIA DIFFERENT VALUE A->B AND A->C 		
-7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC */										
+7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC 
 
-	
-	
-	ll n,t,a,b;
-	cin>>n>>t>>a>>b;
-	
-	vector<pair<ll,ll>> vec(n);
-	multiset<ll> s;
-	for(int i=0;i<n;i++){
-		cin>>vec[i].second;
-		
-	}
-	for(int i=0;i<n;i++){
-		cin>>vec[i].first;
-		s.insert(vec[i].first);
-	}
-	
-	sort(vec.begin(),vec.end());
-	
-	ll curr_time=0;
-	ll ans=0;
-	//for(int i=0;i<n;i++) deb(vec[i].first,vec[i].second);
-	for(ll i=0;i<n;i++){
-		//deb(i);
-		s.erase(s.find(vec[i].first));
-		if(s.empty()){
-			curr_time+=vec[i].second==0?a:b;
-			if(curr_time<=t){
-				ans=max(ans,i+1);
-			}
-		}else{
-			curr_time+=vec[i].second==0?a:b;
-			if(*(s.begin())>curr_time and curr_time<=t){
-				ans=max(ans,i+1);
-			}
-		}
-	}
-	
-	
-	//deb(curr_time);
-	
-	ret(ans);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+***********LEAVE**************LEAVE************LEAVE************LEAVE***********LEAVE************LEAVE**********LEAVE*************LEAVE************LEAVE****LEAVE*/										
+
+
 		
 ret("");	
 }
@@ -177,12 +138,12 @@ int main() {
     
 
     
-    ll testCase;
-    cin>>testCase;
-    for(ll tt=0;tt<testCase;tt++){
+    //ll testCase;
+    //cin>>testCase;
+    //for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    }
+    //}
     return 0;
 }
