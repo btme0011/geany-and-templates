@@ -6,7 +6,7 @@ using namespace __gnu_pbds;
 //c++ templte for help.......................................................................................................................................................
 typedef long long ll;
 #define M ll(998244353)
-const ll INF=ll(1e17+5);
+const ll INF=ll(1e18+10);
 
 
 
@@ -93,23 +93,17 @@ ll mod_Mul(T... t){
 
 
 //c++ template for help.....................................................................................................................................................
-vector<ll> org;
-set<ll> vis;
-void dfs(ll start,vector<vector<ll>> &edge){
-	org.push_back(start);
-	vis.insert(start);
-	for(auto x:edge[start]){
-		if(vis.count(x)==0) dfs(x,edge);
-	}
-}
+
+
 
 string solve(){
 /*	TAKE TIME TO THINK		:		|					1) MAKE SURE THE ALGO WILL WORK
-	TAKE TIME TO THINK		:			|			 			*KEEP QUESTION CLEAR IN MIND
-	TAKE TIME TO THINK			---			|		 			*IF NOT GETTING IDEA USE PAPER OR WALK OR TAKE REST OR SEE OTHER QUESTION
-	TAKE TIME TO THINK		:			|			 			*THINK BRUTE FORCE AND OPTIMIZE
-	TAKE TIME TO THINK		:		|							*SOLVE SIMPLER VERSION OF THE PROBLEM
-																*HELP FROM EXAMPLE
+	TAKE TIME TO THINK		:			|			 			*ASK QUESTION AFTER EVERY STEP OF THE DECISION WILL IT WORK AND PROVE IT?
+	TAKE TIME TO THINK			---			|		 			*KEEP QUESTION CLEAR IN MIND
+	TAKE TIME TO THINK		:			|			 			*IF NOT GETTING IDEA USE PAPER OR WALK OR TAKE REST OR SEE OTHER QUESTION
+	TAKE TIME TO THINK		:		|							*THINK BRUTE FORCE AND OPTIMIZE
+																*SOLVE SIMPLER VERSION OF THE PROBLEM
+																*HELP FROM EXAMPLE(CHECK YOUR ALGO ON EXAMPLE)
 																* LEAVE
 		DEBUG											2) THINK THE PROCESS OF CODING
 1) 	CODE(CONSIDER THE BLACK AREA)								*KEEP THINGKING OF EDGE CASE ALSO				 	
@@ -119,9 +113,58 @@ string solve(){
 5) 	CODE AGAIN	
 6) 	MAP KA DIKKAT TO SAME KEY KA LIA DIFFERENT VALUE A->B AND A->C 		
 7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC */										
-																
-	
 
+	
+	
+	ll n,t,a,b;
+	cin>>n>>t>>a>>b;
+	
+	vector<pair<ll,ll>> vec(n);
+	multiset<ll> s;
+	for(int i=0;i<n;i++){
+		cin>>vec[i].second;
+		
+	}
+	for(int i=0;i<n;i++){
+		cin>>vec[i].first;
+		s.insert(vec[i].first);
+	}
+	
+	sort(vec.begin(),vec.end());
+	
+	ll curr_time=0;
+	ll ans=0;
+	//for(int i=0;i<n;i++) deb(vec[i].first,vec[i].second);
+	for(ll i=0;i<n;i++){
+		//deb(i);
+		s.erase(s.find(vec[i].first));
+		if(s.empty()){
+			curr_time+=vec[i].second==0?a:b;
+			if(curr_time<=t){
+				ans=max(ans,i+1);
+			}
+		}else{
+			curr_time+=vec[i].second==0?a:b;
+			if(*(s.begin())>curr_time and curr_time<=t){
+				ans=max(ans,i+1);
+			}
+		}
+	}
+	
+	
+	//deb(curr_time);
+	
+	ret(ans);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 		
 ret("");	
@@ -134,12 +177,12 @@ int main() {
     
 
     
-    //ll testCase;
-    //cin>>testCase;
-    //for(ll tt=0;tt<testCase;tt++){
+    ll testCase;
+    cin>>testCase;
+    for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    //}
+    }
     return 0;
 }
