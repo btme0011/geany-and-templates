@@ -93,19 +93,6 @@ ll mod_Mul(T... t){
 
 //c++ template for help.....................................................................................................................................................
 
-
-bool check(string &s){
-	ll t=0;
-	ll m=0;
-	for(auto x:s){
-		if(x=='T') t++;
-		else m++;
-		if(m>t) return 0;
-	}
-	return 1;
-	
-}
-
 string solve(){
 /*	TAKE TIME TO THINK		:		|					1) MAKE SURE THE ALGO WILL WORK
 	TAKE TIME TO THINK		:			|			 			*WRITE DOWN OBSERVATION
@@ -117,17 +104,17 @@ string solve(){
 																*HELP FROM EXAMPLE(CHECK YOUR ALGO ON EXAMPLE)
 		DEBUG													* LEAVE
 1) 	CODE(CONSIDER THE BLACK AREA)						2) THINK THE PROCESS OF CODING					 	
-2) 	ALGO														*KEEP THINGKING OF EDGE CASE ALSO	
-3) 	OVERFLOW 											3) CODE PERFECTLY AND FAST BE CRYSTAL CLEAR ABOUT EVERY THING YOU CODE , CODE WITH PRESENCE OF MIND
-4)	DIFFERENT INPUT 											*USE FUNCTION AND DESCRIBING VARIABLE NAMES
-5) 	CODE AGAIN	
+2) 	ALGO														*IF THE ALGO IS COMPLICATED WRITE THE CLEAR PROCESS ON PAPER THEN CODE
+3) 	OVERFLOW 													*KEEP THINGKING OF EDGE CASE ALSO
+4)	DIFFERENT INPUT 									3) CODE PERFECTLY AND FAST BE CRYSTAL CLEAR ABOUT EVERY THING YOU CODE , CODE WITH PRESENCE OF MIND
+5) 	CODE AGAIN													*USE FUNCTION AND DESCRIBING VARIABLE NAMES
 6) 	MAP KA DIKKAT TO SAME KEY KA LIA DIFFERENT VALUE A->B AND A->C 		
-7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC 
+7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC
 
 ***********LEAVE**************LEAVE************LEAVE************LEAVE***********LEAVE************LEAVE**********LEAVE*************LEAVE************LEAVE****LEAVE*/										
+	
 
-
-		
+	
 ret("");	
 }
 
