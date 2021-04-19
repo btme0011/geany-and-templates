@@ -5,7 +5,7 @@ using namespace __gnu_pbds;
 
 //c++ templte for help.......................................................................................................................................................
 typedef long long ll;
-#define M ll(998244353)
+#define M ll(1e9+7)
 const ll INF=ll(1e18+10);
 
 
@@ -93,6 +93,7 @@ ll mod_Mul(T... t){
 
 //c++ template for help.....................................................................................................................................................
 
+
 string solve(){
 /*	TAKE TIME TO THINK		:		|					1) MAKE SURE THE ALGO WILL WORK
 	TAKE TIME TO THINK		:			|			 			*WRITE DOWN OBSERVATION
@@ -102,7 +103,8 @@ string solve(){
 																*THINK BRUTE FORCE AND OPTIMIZE
 																*SOLVE SIMPLER VERSION OF THE PROBLEM
 																*HELP FROM EXAMPLE(CHECK YOUR ALGO ON EXAMPLE)
-		DEBUG													* LEAVE
+																*IF IT RELATED TO SOME INTUATION WRITE A CODE AND TEST ON EXAMPLE DO SOME EXPRERIMENT
+		DEBUG													*LEAVE
 1) 	CODE(CONSIDER THE BLACK AREA)						2) THINK THE PROCESS OF CODING					 	
 2) 	ALGO														*IF THE ALGO IS COMPLICATED WRITE THE CLEAR PROCESS ON PAPER THEN CODE
 3) 	OVERFLOW 													*KEEP THINGKING OF EDGE CASE ALSO
@@ -110,10 +112,10 @@ string solve(){
 5) 	CODE AGAIN													*USE FUNCTION AND DESCRIBING VARIABLE NAMES
 6) 	MAP KA DIKKAT TO SAME KEY KA LIA DIFFERENT VALUE A->B AND A->C 		
 7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC
-
+														
 ***********LEAVE**************LEAVE************LEAVE************LEAVE***********LEAVE************LEAVE**********LEAVE*************LEAVE************LEAVE****LEAVE*/										
 	
-
+	
 	
 ret("");	
 }
