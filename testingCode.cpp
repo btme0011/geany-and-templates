@@ -5,10 +5,6 @@ using namespace __gnu_pbds;
 
 //c++ templte for help.......................................................................................................................................................
 typedef long long ll;
-#define M ll(1e9+7)
-const ll INF=ll(1e18+10);
-
-
 
 template<typename... T>
 void print1(T... t){
@@ -19,10 +15,9 @@ template<typename... T>
 void print2(T... t){
         vector<vector<ll>> ans={t...};
         for(ll i=0;i<(ll)ans.size();i++){
-            if(i!=0) cerr<<"\t\t";
-            else cerr<<"\t";
+            if(i==0) cerr<<endl;
             for(ll j=0;j<(ll)ans[i].size();j++){
-                cerr<<ans[i][j]<<" ";
+				cerr << left << setw(10) << setfill(' ') <<ans[i][j];
             }
             if(i!=(ll)ans.size()-1)
             cerr<<endl;
@@ -34,29 +29,6 @@ void print2(T... t){
 // to return everything in string
 #define ret(...) {stringstream returnn;returnn<<__VA_ARGS__;return returnn.str();}
 
-
-//for loop
-#define fo(i,n) for(int i=0;i<(ll)n;i++)
-#define Fo(i,k,n) for(int i=k;i<n;i++)
- 
- 
-//to print vector element 
-template<typename T>
-void printV(T vec){
-    fo(i,vec.size()) cout<<vec[i]<<" "<<flush;
-    cout<<endl;
-    }
-    
-
-//iterate map
-template<typename T>
-void itR(T map){
-     for(auto itr=map.begin();itr!=map.end();itr++){
-                deb(itr->first,itr->second);
-            }
-    cout<<endl;
-}
-
 typedef tree<
 ll,
 null_type,
@@ -65,30 +37,24 @@ greater_equal<ll>,	// less for set and  less_equal for  multiset
 rb_tree_tag,
 tree_order_statistics_node_update>
 pods;
+//1. order_of_key(k) : number of elements strictly lesser than k
+//2. find_by_order(k) : k-th element in the set
 
- 
-//mod
-template<typename... T>
-ll mod_Sum(T... t){
-	ll ans=0;
-    ((ans=(((ans%M)+(t%M))%M)),...);
-    return ans%M;
-}
-#define mod_sum(...) mod_Sum(__VA_ARGS__)
 
-ll mod_sub(ll a,ll b){
-	return (a%M-b%M+M)%M;
-}
 
-template<typename... T>
-ll mod_Mul(T... t){
-	ll ans=1;
-    ((ans=(((ans%M)*(t%M))%M)),...);
-    return ans%M;
-}
-#define mod_mul(...) mod_Mul(__VA_ARGS__)
-
-//take n and array
+#define M ll(1e9+7)
+const ll INF=ll(1e18+10);
+template<typename T>void printV(T vec){for(auto x:vec) cout<<x<<" "<<flush;cout<<endl;}
+template<typename... T>ll mod_sum(T... t){ll ans=0;((ans=(((ans%M)+(t%M))%M)),...);return ans%M;}
+ll mod_diff(ll a,ll b){return (a%M-b%M+M)%M;}
+template<typename... T>ll mod_mul(T... t){ll ans=1;((ans=(((ans%M)*(t%M))%M)),...);return ans%M;}
+template <class T> T gcd(T a , T b){ while(a != 0){T temp = a; a = b % a; b = temp;}return b;}
+template <class T> T egcd(T a , T b , T &x , T &y){T gcd , xt , yt;if(a == 0){gcd = b;x = 0 , y = 1;}else {gcd = egcd(b % a , a , xt , yt);x = yt - (b/a)*xt; y = xt;}return gcd;}
+template <class T> T expo(T base , T exp , T mod){T res = 1;base = base % mod;while (exp > 0){if (exp & 1)res = (res*base) % mod;exp = exp>>1;base = (base*base) % mod;}return res;}
+template <class T> T modinv(T a , T mod){T x , y; egcd<T>(a , mod , x , y);while(x < 0) x += mod; while(x >= mod) x -= mod; return x;}
+template <class T> T modinvfermat(T a , T mod){return expo<T>(a , mod - 2 , mod);}
+template <class T> T mceil(T a, T b){if(a % b == 0) return a/b; else return a/b + 1;}
+template <class T> T lcm(T a, T b){return (a*b)/gcd<T>(a, b);}
 
 
 //c++ template for help.....................................................................................................................................................
@@ -103,8 +69,7 @@ string solve(){
 																*THINK BRUTE FORCE AND OPTIMIZE
 																*SOLVE SIMPLER VERSION OF THE PROBLEM
 																*HELP FROM EXAMPLE(CHECK YOUR ALGO ON EXAMPLE)
-																*IF IT RELATED TO SOME INTUATION WRITE A CODE AND TEST ON EXAMPLE DO SOME EXPRERIMENT
-		DEBUG													*LEAVE
+		DEBUG													* LEAVE
 1) 	CODE(CONSIDER THE BLACK AREA)						2) THINK THE PROCESS OF CODING					 	
 2) 	ALGO														*IF THE ALGO IS COMPLICATED WRITE THE CLEAR PROCESS ON PAPER THEN CODE
 3) 	OVERFLOW 													*KEEP THINGKING OF EDGE CASE ALSO
@@ -112,8 +77,19 @@ string solve(){
 5) 	CODE AGAIN													*USE FUNCTION AND DESCRIBING VARIABLE NAMES
 6) 	MAP KA DIKKAT TO SAME KEY KA LIA DIFFERENT VALUE A->B AND A->C 		
 7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC
+8)	WRITE BRUTEFORCE AND CHECK
+9) 	CHECK ON RANDOM TEST CASES
 														
 ***********LEAVE**************LEAVE************LEAVE************LEAVE***********LEAVE************LEAVE**********LEAVE*************LEAVE************LEAVE****LEAVE*/										
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -127,12 +103,12 @@ int main() {
     
 
     
-    //ll testCase;
-    //cin>>testCase;
-    //for(ll tt=0;tt<testCase;tt++){
+    ll testCase;
+    cin>>testCase;
+    for(ll tt=0;tt<testCase;tt++){
         string ans1=solve();
         if(ans1!="")
             cout<<ans1<<endl;
-    //}
+    }
     return 0;
 }
