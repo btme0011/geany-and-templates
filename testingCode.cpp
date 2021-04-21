@@ -59,38 +59,20 @@ template <class T> T lcm(T a, T b){return (a*b)/gcd<T>(a, b);}
 
 //c++ template for help.....................................................................................................................................................
 
-
 string solve(){
-/*	TAKE TIME TO THINK		:		|					1) MAKE SURE THE ALGO WILL WORK
-	TAKE TIME TO THINK		:			|			 			*WRITE DOWN OBSERVATION
-	TAKE TIME TO THINK			---			|		 			*ASK QUESTION AFTER EVERY STEP OF THE DECISION WILL IT WORK AND PROVE IT?
-	TAKE TIME TO THINK		:			|			 			*KEEP QUESTION CLEAR IN MIND
-	TAKE TIME TO THINK		:		|							*IF NOT GETTING IDEA USE PAPER OR WALK OR TAKE REST OR SEE OTHER QUESTION
-																*THINK BRUTE FORCE AND OPTIMIZE
-																*SOLVE SIMPLER VERSION OF THE PROBLEM
-																*HELP FROM EXAMPLE(CHECK YOUR ALGO ON EXAMPLE)
-		DEBUG													* LEAVE
-1) 	CODE(CONSIDER THE BLACK AREA)						2) THINK THE PROCESS OF CODING					 	
-2) 	ALGO														*IF THE ALGO IS COMPLICATED WRITE THE CLEAR PROCESS ON PAPER THEN CODE
-3) 	OVERFLOW 													*KEEP THINGKING OF EDGE CASE ALSO
-4)	DIFFERENT INPUT 									3) CODE PERFECTLY AND FAST BE CRYSTAL CLEAR ABOUT EVERY THING YOU CODE , CODE WITH PRESENCE OF MIND
-5) 	CODE AGAIN													*USE FUNCTION AND DESCRIBING VARIABLE NAMES
-6) 	MAP KA DIKKAT TO SAME KEY KA LIA DIFFERENT VALUE A->B AND A->C 		
-7) 	CHANGED SOMETHING IN BETWEEN LIKE VARIABLE OR ELEMENT OF ARRAY ETC
-8)	WRITE BRUTEFORCE AND CHECK
-9) 	CHECK ON RANDOM TEST CASES
-														
-***********LEAVE**************LEAVE************LEAVE************LEAVE***********LEAVE************LEAVE**********LEAVE*************LEAVE************LEAVE****LEAVE*/										
+
+
+
+
+
+
+
+
+
+
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 ret("");	
@@ -100,7 +82,6 @@ int main() {
     cout<<setprecision(15);
     ios::sync_with_stdio(0);
     cin.tie(0);
-    
 
     
     ll testCase;
