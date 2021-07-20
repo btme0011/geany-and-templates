@@ -80,6 +80,7 @@ template <class T> T lcm(T a, T b){return (a*b)/gcd<T>(a, b);}
 string solve(){
 	
 	// DONT GET STUCK ON ONE APPROCH
+	// EVERY THING SHOULD BE CRYSTAL CLEAR
 	
 
 	
@@ -87,7 +88,7 @@ string solve(){
 ret("");	
 }
 
-int main() {
+int main() { 
     ios::sync_with_stdio(0);
     cin.tie(0);	
     cout<<setprecision(50);
